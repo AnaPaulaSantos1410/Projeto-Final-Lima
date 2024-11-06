@@ -1,0 +1,240 @@
+
+/* Definições gerais */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Navegação */
+nav {
+    background-color: #862424;
+    padding: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #f4f4f9; /* Cor branca */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #cd6f6f;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #862424;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+    color: #f4f4f9;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #fffcfc;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Conteúdo principal */
+.container {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #640000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #740000;
+}
+
+p#costEstimate {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+
+footer {
+    background-color: #862424; /* Cor preta para o fundo do footer */
+    color: white; /* Texto branco */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #862424; /* Cor vermelha para o fundo da área do rodapé */
+    border-top: 2px solid #5a1a1a; /* Cor mais escura para a borda superior */
+}
+
+.footer-section {
+    width: 250px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f1f1f1; /* Cor de título em cinza claro para contraste */
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #f1f1f1; /* Cor do texto em cinza claro */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos links */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos ícones */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #f1f1f1; /* Cor do texto do copyright */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+

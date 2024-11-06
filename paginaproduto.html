@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="paginaprotudo.css">
+  <title>Produto</title>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="Projeto Final.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li class="dropdown">
+            <a href="Categorias.html" class="dropbtn">Categorias</a>
+            <ul class="dropdown-content">
+                <li><a href="maisvendidos.html">Mais Vendidos</a></li>
+                <li><a href="promos.html">Promoções</a></li>
+                <li><a href="generos.html">Gênero</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#servicos" class="dropbtn">Serviços</a>
+            <ul class="dropdown-content">
+                <li><a href="pesquisar.html">Pesquisar</a></li>
+                <li><a href="Trabalhe.html">Trabalhe Conosco</a></li>
+                <li><a href="publiqueconosco.html">Publique Conosco</a></li>
+            </ul>
+        </li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="PaginaCarrinho.html">Carrinho</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="produto">
+      <div class="imagens-produto">
+        <div class="miniaturas"></div>
+        <img src="produto1.png" alt="Produto Principal" class="imagem-principal" id="imagem-principal">
+        <div class="miniaturas">
+          <img src="produto1.png" alt="Miniatura 1" class="miniatura" data-imagem="produto1.png">
+          <img src="produto2.png" alt="Miniatura 2" class="miniatura" data-imagem="produto2.png">
+          <img src="produto3.png" alt="Miniatura 3" class="miniatura" data-imagem="produto3.png">
+        </div>
+      </div>
+      <div class="detalhes-produto">
+        <h2>Livro - Percy Jackson </h2>
+        <p class=""Percy Jackson e os Olimpianos é uma série de livros de fantasia escrita por Rick Riordan, que segue as aventuras de Percy Jackson, um adolescente que descobre ser filho de um deus grego. Após uma série de eventos extraordinários, Percy é levado ao Acampamento Meio-Sangue, um local seguro para semideuses como ele. Ao lado de seus amigos, Annabeth Chase e Grover Underwood, Percy embarca em jornadas épicas para impedir que os antigos deuses gregos sejam destronados e que o equilíbrio do mundo seja destruído. A série mistura mitologia grega com uma narrativa moderna e empolgante, cativando leitores de todas as idades.</p>
+        <p class="preco">R$ 149,99</p>
+        <form class="opcoes-compra" id="form-compra">
+          <label for="quantidade">Quantidade:</label>
+          <select id="quantidade">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+
+          <button type="submit">Adicionar ao Carrinho</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="comentarios">
+      <h3>Comentários dos Clientes</h3>
+      <div class="comentario">
+        <img src="pessoa4.png" alt="Foto de Adriana" class="foto-usuario">
+        <p><strong>Adriana Lima:</strong> Ótimo produto, recomendo!</p>
+      </div>
+      <div class="comentario">
+        <img src="pessoa5.png" alt="Foto de Gisele" class="foto-usuario">
+        <p><strong>Gisele Bündchen:</strong> Muito bom! Superou minhas expectativas!!! Super indico!</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Script para adicionar o produto ao carrinho
+    const formCompra = document.getElementById('form-compra');
+    formCompra.addEventListener('submit', function(e) {
+      e.preventDefault(); // Impede o envio do formulário
+
+      // Obtém os valores dos campos
+      const tamanho = document.getElementById('quantidade').value;
+
+      const produto = {
+        nome: 'Nome Produto',
+        preco: 'R$ 149,99',
+        tamanho: tamanho,
+        cor: cor
+      };
+
+      // Salva o produto no localStorage (simulando um carrinho de compras)
+      let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+      carrinho.push(produto);
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      alert('Produto adicionado ao carrinho!');
+    });
+  </script>
+
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Trabalhe Conosco</h4>
+      <p>Tel: 999994828</p>
+      <p>Email: trabalhecomaadaga@gmail.com</p>
+    </div>
+    <div class="footer-section">
+      <h4>Links Rápidos para Acesso</h4>
+      <ul>
+        <li><a href="Projeto Final.html">Home</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contato</h4>
+      <p>Email: aadganegra@gmail.com</p>
+      <p>Telefone: (19) 999994828</p>
+      <p>Endereço: Rua Estados Unidos, Brasil</p>
+    </div>
+    <div class="footer-section">
+      <h4>Siga-nos</h4>
+      <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Livraria A Adaga Negra - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
+

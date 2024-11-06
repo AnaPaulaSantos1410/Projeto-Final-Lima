@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria A Adaga Negra</title>
+    <link rel="stylesheet" href="publiqueconosco.css">
+    <link rel="shortcut icon" href="Logotipo Loja de Roupas Feminina.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="Projeto Final.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li class="dropdown">
+                <a href="Categorias.html" class="dropbtn">Categorias</a>
+                <ul class="dropdown-content">
+                    <li><a href="maisvendidos.html">Mais Vendidos</a></li>
+                    <li><a href="promos.html">Promoções</a></li>
+                    <li><a href="generos.html">Gênero</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#servicos" class="dropbtn">Serviços</a>
+                <ul class="dropdown-content">
+                    <li><a href="pesquisar.html">Pesquisar</a></li>
+                    <li><a href="Trabalhe.html">Trabalhe Conosco</a></li>
+                    <li><a href="publiqueconosco.html">Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="PaginaCarrinho.html">Carrinho</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <h2>Solicitação de Publicação de Livro</h2>
+    
+        <!-- Formulário de Solicitação -->
+        <form id="publishRequestForm">
+            <!-- Nome do Livro -->
+            <label for="bookTitle">Nome do Livro:</label>
+            <input type="text" id="bookTitle" name="bookTitle" required>
+    
+            <!-- Arquivo de Manuscrito -->
+            <label for="bookFile">Envie o arquivo do livro (PDF, DOCX):</label>
+            <input type="file" id="bookFile" name="bookFile" accept=".pdf,.docx" required>
+    
+            <!-- Preço Estimado -->
+            <label for="pageCount">Número de Páginas:</label>
+            <input type="number" id="pageCount" name="pageCount" placeholder="Insira o número de páginas" required>
+            <p id="costEstimate">Custo estimado: R$ 0,00</p>
+    
+            <!-- Seção para Capa -->
+            <h3>Desenvolvimento de Capa</h3>
+            <label for="coverDesign">Descreva a capa que deseja:</label>
+            <textarea id="coverDesign" name="coverDesign" rows="4"></textarea>
+    
+            <!-- Botão de Envio -->
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Trabalhe Conosco</h4>
+            <p>Tel: 999994828</p>
+            <p>Email: trabalhecomaadaga@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <h4>Links Rápidos para Acesso</h4>
+            <ul>
+                <li><a href="Projeto Final.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html"> Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contato</h4>
+            <p>Email: aadganegra@gmail.com</p>
+            <p>Telefone: (19) 999994828</p>
+            <p>Endereço: Rua Estados Unidos, Brasil</p>
+        </div>
+        <div class="footer-section">
+            <h4>Siga-nos</h4>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Portal de Autores - Livraria A Adaga Negra - Todos os direitos reservados </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+nav {
+    background-color: #862424;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f1f1f1;
+}
+
+.services {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.services h1 {
+    color: #862424;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.services h2 {
+    color: #862424;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.services p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #862424; /* Cor preta para o fundo do footer */
+    color: white; /* Texto branco */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #862424; /* Cor vermelha para o fundo da área do rodapé */
+    border-top: 2px solid #5a1a1a; /* Cor mais escura para a borda superior */
+}
+
+.footer-section {
+    width: 250px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f1f1f1; /* Cor de título em cinza claro para contraste */
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #f1f1f1; /* Cor do texto em cinza claro */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos links */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos ícones */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #f1f1f1; /* Cor do texto do copyright */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+

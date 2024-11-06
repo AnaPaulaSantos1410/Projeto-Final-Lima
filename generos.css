@@ -1,0 +1,233 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    height: 2000px; /* Apenas para demonstrar o scroll */
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #922b2b;
+    padding: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; 
+}
+
+nav ul li a {
+    color: rgb(5, 4, 4);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block; 
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color:#cd6f6fdc;
+}
+
+
+nav ul li .dropdown-content {
+    display: none; 
+    position: absolute; 
+    background-color: #922b2b;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #fffcfc; 
+}
+
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+.sumario {
+    position: fixed; /* Fixa o sumário no canto */
+    top: 10px;       /* Distância do topo */
+    left: 10px;      /* Distância da esquerda */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    border: 1px solid #b01313; /* Borda do sumário */
+    padding: 15px;   /* Espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    z-index: 1000;   /* Fica acima de outros elementos */
+}
+
+.sumario ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0;            /* Remove espaçamento padrão */
+    margin: 0;             /* Remove margens padrão */
+}
+
+.sumario li {
+    margin: 10px 0;        /* Espaçamento entre itens */
+}
+
+.sumario a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #922b2b;       /* Cor do link */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sumario a:hover {
+    text-decoration: underline; /* Sublinha no hover */
+}
+
+/* Seções */
+section {
+    margin: 60px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: 200px; /* Para que a seção fique ao lado do sumário */
+}
+
+h1 {
+    font-size: 24px;
+    color: #912222;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sumario {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    section {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+footer {
+    background-color: #862424; /* Cor preta para o fundo do footer */
+    color: white; /* Texto branco */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #862424; /* Cor vermelha para o fundo da área do rodapé */
+    border-top: 2px solid #5a1a1a; /* Cor mais escura para a borda superior */
+}
+
+.footer-section {
+    width: 250px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f1f1f1; /* Cor de título em cinza claro para contraste */
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #f1f1f1; /* Cor do texto em cinza claro */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos links */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos ícones */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #f1f1f1; /* Cor do texto do copyright */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+

@@ -1,0 +1,303 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #5a1a1a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #922b2b;
+    padding: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative; 
+}
+
+nav ul li a {
+    color: rgb(5, 4, 4);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block; 
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color:#cd6f6fdc;
+}
+
+
+nav ul li .dropdown-content {
+    display: none; 
+    position: absolute; 
+    background-color: #922b2b;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #fffcfc; 
+}
+
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.banner {
+    background-color:#922b2be2;
+    color: rgb(17, 17, 17);
+    padding: 9px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+}
+.banner p {
+    font-size: 18px;
+    margin: 0;
+}
+.banner a {
+    display: inline-block;
+    background-color: #922b2b;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.banner a:hover {
+    background-color: #862424;
+}
+
+/* Container do slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: 50px auto;
+}
+
+/* Estilos dos slides */
+.slides {
+    display: none;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+.slides img {
+    width: 100%;
+    border-radius: 10px;
+    
+
+}
+
+/* Adiciona a animação de slide automático */
+input[type="radio"] {
+    display: none;
+}
+
+.slide-wrapper {
+    position: relative;
+}
+
+/* Controla o comportamento dos slides via CSS */
+#slide1:checked ~ .slide-wrapper .s1,
+#slide2:checked ~ .slide-wrapper .s2,
+#slide3:checked ~ .slide-wrapper .s3 {
+    display: block;
+}
+
+/* Animação para transição automática entre slides */
+@keyframes slider {
+    0% { left: 0%; }
+    33.33% { left: 0%; }
+    50% { left: -100%; }
+    83.33% { left: -100%; }
+    100% { left: -200%; }
+}
+
+.slider {
+    width: 300%;
+    display: flex;
+    animation: slider 9s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+   img {
+    max-width: 35%;  /* A imagem não será maior que o contêiner */
+    height: auto;   
+   }
+
+
+.dot-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+.section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.book-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.book {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+.book img {
+    width: 100%;
+    height: auto;
+}
+.book h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+.book p {
+    color: #120d0d;
+        
+}
+
+footer {
+    background-color: #862424; /* Cor preta para o fundo do footer */
+    color: white; /* Texto branco */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: #862424; /* Cor vermelha para o fundo da área do rodapé */
+    border-top: 2px solid #5a1a1a; /* Cor mais escura para a borda superior */
+}
+
+.footer-section {
+    width: 250px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f1f1f1; /* Cor de título em cinza claro para contraste */
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #f1f1f1; /* Cor do texto em cinza claro */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos links */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #000000; /* Vermelho ao passar o mouse nos ícones */
+}
+
+footer p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #f1f1f1; /* Cor do texto do copyright */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
+
